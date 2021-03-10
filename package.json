@@ -4,7 +4,10 @@
   "description": "A starter kit for creating web apps",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "netlify dev",
+    "netlify:link": "netlify link",
+    "build": "rollup -c",
+    "make": "echo 'TODO: This will eventually replace all the 'my-app' and similar text to the provided value."
   },
   "keywords": [
     "Ziro",
@@ -12,5 +15,19 @@
     "Web"
   ],
   "author": "Alex Lockhart",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.5.0",
+    "lit-element": "^2.4.0",
+    "ziro-components": "^1.0.0"
+  },
+  "devDependencies": {
+    "es-dev-server": "^2.1.0",
+    "netlify-cli": "^3.10.8",
+    "node-fetch": "^2.6.1",
+    "rollup": "^2.41.0",
+    "rollup-plugin-filesize": "^9.1.1",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^7.0.2"
+  }
 }
