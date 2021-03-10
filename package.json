@@ -1,0 +1,16 @@
+{
+  "name": "ziro-app",
+  "version": "0.0.0",
+  "description": "A starter kit for creating web apps",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Ziro",
+    "App",
+    "Web"
+  ],
+  "author": "Alex Lockhart",
+  "license": "ISC"
+}
