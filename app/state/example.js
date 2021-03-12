@@ -1,4 +1,4 @@
-import { ZiroState } from '/node_modules/ziro-state/src/index.js';
+import { ZiroState } from 'ziro-state';
 
 class Example extends ZiroState {
     init() {
@@ -11,13 +11,11 @@ class Example extends ZiroState {
         this.state.message = str;
     }
 
-    updateMessageAsync(str) {
-        return new Promise((resolve) => {
-            setTimeout(() => {
-                updateMessage(str);
-                resolve();
-            }, 3000);
-        });
+    updateMessageAsync() {
+        this.sendUpdate(
+            fetch('/.netlify/functions/example')
+            .then(res => res.json())
+            .then(json => this.updateMessage(json.title)));
     }
 }
 

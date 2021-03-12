@@ -1,5 +1,5 @@
 import { LitElement, html, css } from 'lit-element';
-import { listen } from '/node_modules/ziro-state/src/index.js';
+import { listen } from 'ziro-state';
 import exampleState from '../state/example.js';
 
 export class MyAppMessage extends LitElement {
@@ -10,8 +10,7 @@ export class MyAppMessage extends LitElement {
 
   static get properties() {
     return {
-      text: { type: String },
-      inputText: { type: String }
+      text: { type: String }
     };
   }
 
@@ -23,13 +22,12 @@ export class MyAppMessage extends LitElement {
   render() {
     return html`
       <h2>${this.text}</h2>
-      <button @click=${this.updateMessage}>Update</button>
-      <input type="text" @change=${(e) => this.inputText = e.target.value}></input>
+      <button @click=${this.updateMessage}>Load Title</button>
     `;
   }
 
   updateMessage() {
-    exampleState.updateMessageAsync(this.inputText);
+    exampleState.updateMessageAsync();
   }
 
   stateUpdated() {
