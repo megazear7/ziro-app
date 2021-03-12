@@ -3,7 +3,7 @@ import '../components/message.js';
 
 export class MyAppPage3 extends LitElement {
   static get styles() {
-    return [variables, css`
+    return [css`
     `];
   }
 

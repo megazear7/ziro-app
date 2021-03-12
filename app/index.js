@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit-element';
+import variables from './styles/variables.js';
 import './pages/page-1';
 import './pages/page-2';
 import './pages/page-3';
