@@ -2,8 +2,6 @@
 
 ## TODO
 
-1. How should it be built for production? Assume netlify hosting with functions, etc...
-1. Add an example Netlify Function in /api/example.js
 1. Make ziro-cli which can be used to create a new app. The cli should be installable globally and provide a `ziro init my-app` command. This command should clone ziro-app and then do name replacements througout the files.
 1. Add an svg icon example (in an icons directory)
 1. Add routing
@@ -17,9 +15,11 @@
 npm run serve
 ```
 
+Open [localhost:8888](http://localhost:8888)
+
 ## Deploy
 
-TODO
+Push changes to the `main` branch.
 
 ## Overview
 

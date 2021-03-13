@@ -4,9 +4,8 @@
   command = "npm run build"
 
 [dev]
-  publish = "site"
   framework = "#custom"
   autoLaunch = false
-  command = "npm run serve:app"
+  command = "npm run app:serve"
   targetPort = 8000
   port = 8888
