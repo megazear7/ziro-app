@@ -17,7 +17,7 @@ export default css`
     
     h3 {
         font-size: var(--size-text-x2);
-        color: var(--color-tertiary);
+        color: var(--color-background-bold);
     }
     
     h4 {

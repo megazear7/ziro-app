@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit-element';
+import { listen } from 'ziro-state';
 import globals from './styles/globals.js';
 import './pages/page-1.js';
 import './pages/page-2.js';
@@ -11,13 +12,11 @@ export class MyApp extends LitElement {
       :host {
         --color-primary: #f78b08;
         --color-secondary: #49b695;
-        --color-tertiary: #79b04f;
         --color-background-primary: #eee;
         --color-background-secondary: #fff;
 
         --color-primary-bold: #190e01;
         --color-secondary-bold: #07120f;
-        --color-tertiary-bold: #0c1208;
         --color-background-bold: #111;
         --color-background-secondary-bold: #222;
 
@@ -68,8 +67,14 @@ export class MyApp extends LitElement {
 
   static get properties() {
     return {
-      message: { type: String }
+      message: { type: String },
+      colorMode: { type: String }
     };
+  }
+
+  connectedCallback() {
+    super.connectedCallback();
+    listen(this);
   }
 
   render() {
@@ -93,6 +98,10 @@ export class MyApp extends LitElement {
         </ziro-nav>
     </ziro-screen>
     `;
+  }
+
+  stateUpdated() {
+    this.colorMode = appState.getState().colorMode;
   }
 }
 

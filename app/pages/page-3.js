@@ -1,10 +1,10 @@
 import { LitElement, html, css } from 'lit-element';
-import globals from '../styles/globals.js';
-import '../components/message.js';
+import globalStyles from '../styles/globals.js';
+import '../components/color-mode.js';
 
 export class MyAppPage3 extends LitElement {
   static get styles() {
-    return [globals, css`
+    return [globalStyles, css`
       :host {
         display: block;
       }
@@ -19,7 +19,8 @@ export class MyAppPage3 extends LitElement {
 
   render() {
     return html`
-      <h2>Page 2</h2>
+      <h2>Page 3</h2>
+      <my-app-color-mode></my-app-color-mode>
     `;
   }
 }

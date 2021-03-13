@@ -1,6 +1,6 @@
 import { ZiroState } from 'ziro-state';
 
-class Example extends ZiroState {
+class ExampleState extends ZiroState {
     init() {
         return {
             message: 'Hello, World'
@@ -19,4 +19,4 @@ class Example extends ZiroState {
     }
 }
 
-export default new Example();
+export default new ExampleState('example-state');
