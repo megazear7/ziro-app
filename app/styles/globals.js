@@ -7,12 +7,12 @@ export default css`
 
     h1 {
         font-size: var(--size-text-x4);
-        color: var(--color-primary);
+        color: var(--color-primary-bold);
     }
 
     h2 {
         font-size: var(--size-text-x3);
-        color: var(--color-secondary);
+        color: var(--color-secondary-bold);
     }
     
     h3 {
