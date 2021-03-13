@@ -1,10 +1,12 @@
 import { LitElement, html, css } from 'lit-element';
+import globals from '../styles/globals.js';
 import { listen } from 'ziro-state';
 import exampleState from '../state/example.js';
+import buttonStyles from '../styles/buttons.js';
 
 export class MyAppMessage extends LitElement {
   static get styles() {
-    return [css`
+    return [globals, buttonStyles, css`
     `];
   }
 
@@ -22,7 +24,7 @@ export class MyAppMessage extends LitElement {
   render() {
     return html`
       <h2>${this.text}</h2>
-      <button @click=${this.updateMessage}>Load Title</button>
+      <button class="btn" @click=${this.updateMessage}>Load Title</button>
     `;
   }
 

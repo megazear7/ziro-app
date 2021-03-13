@@ -1,9 +1,13 @@
 import { LitElement, html, css } from 'lit-element';
+import globals from '../styles/globals.js';
 import '../components/message.js';
 
 export class MyAppPage1 extends LitElement {
   static get styles() {
-    return [css`
+    return [globals, css`
+      :host {
+        display: block;
+      }
     `];
   }
 
