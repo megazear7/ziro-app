@@ -9,7 +9,7 @@ export default css`
 
         --color-primary-bold: #190e01;
         --color-secondary-bold: #07120f;
-        --color-background-bold: #111;
-        --color-background-secondary-bold: #222;
+        --color-background-bold: #000;
+        --color-background-secondary-bold: #111;
     }
 `;

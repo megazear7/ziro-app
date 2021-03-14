@@ -15,7 +15,9 @@ export default css`
         --size-space-extra-large: 50px;
 
         --border-radius: 3px;
+        --transition-speed-fast: 150ms;
         --transition-speed-normal: 300ms;
+        --transition-speed-slow: 500ms;
         --max-width: 900px;
     }
 `;

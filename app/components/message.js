@@ -12,7 +12,7 @@ export class MyAppMessage extends LitElement {
 
   static get properties() {
     return {
-      text: { type: String }
+      text: { type: String, attribute: false }
     };
   }
 

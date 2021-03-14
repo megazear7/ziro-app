@@ -9,7 +9,8 @@ class AppState extends ZiroState {
 
     init() {
         return {
-            colorMode: 'light'
+            colorMode: 'light',
+            contrastMode: 'normal'
         }
     }
 
@@ -23,6 +24,18 @@ class AppState extends ZiroState {
 
     toggleLights() {
         this.state.colorMode === 'dark' ? this.turnLightsOn() : this.turnLightsOff();
+    }
+
+    turnContrastOn() {
+        this.state.contrastMode = 'contrast';
+    }
+
+    turnContrastOff() {
+        this.state.contrastMode = 'normal';
+    }
+
+    toggleContrast() {
+        this.state.contrastMode === 'normal' ? this.turnContrastOn() : this.turnContrastOff();
     }
 }
 

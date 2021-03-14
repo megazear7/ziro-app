@@ -2,7 +2,7 @@ import { LitElement, html, css } from 'lit-element';
 import globals from '../styles/globals.js';
 import '../components/message.js';
 
-export class MyAppPage2 extends LitElement {
+export class MyAppLandingPage extends LitElement {
   static get styles() {
     return [globals, css`
       :host {
@@ -19,9 +19,9 @@ export class MyAppPage2 extends LitElement {
 
   render() {
     return html`
-      <h2>Page 2</h2>
+      <my-app-message></my-app-message>
     `;
   }
 }
 
-window.customElements.define('my-app-page-2', MyAppPage2);
+window.customElements.define('my-app-landing-page', MyAppLandingPage);

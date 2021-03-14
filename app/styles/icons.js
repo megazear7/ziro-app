@@ -11,12 +11,14 @@ export default css`
 
     .icon svg {
         fill: var(--color-secondary);
-        transition: fill var(--transition-speed-normal) ease-in-out;
+        transition: fill var(--transition-speed-normal) ease-in-out, filter var(--transition-speed-fast) ease-in-out;
         width: var(--size-text-x2);
+        height: var(--size-text-x2);
     }
 
     .icon:hover svg {
         fill: var(--color-primary);
+        filter: drop-shadow( 0px 0px 5px var(--color-primary));
     }
 
     .icon.small svg {
@@ -27,7 +29,7 @@ export default css`
         width: var(--size-text-x3);
     }
 
-    .icon.active {
+    .icon.active svg {
         fill: var(--color-primary);
     }
 `;

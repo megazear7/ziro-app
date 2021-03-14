@@ -7,9 +7,8 @@ import lightStyles from './styles/mode-light.js';
 import darkStyles from './styles/mode-dark.js';
 import contrastLightStyles from './styles/mode-contrast-light.js';
 import contrastDarkStyles from './styles/mode-contrast-dark.js';
-import './pages/page-1.js';
-import './pages/page-2.js';
-import './pages/page-3.js';
+import './pages/landing-page.js';
+import './pages/settings-page.js';
 import 'ziro-components';
 
 export class MyApp extends LitElement {
@@ -33,6 +32,11 @@ export class MyApp extends LitElement {
       ziro-nav-item {
         background-color: var(--color-background-secondary);
         color: var(--color-background-secondary-bold);
+      }
+
+      ziro-nav-item[selected] {
+        background-color: var(--color-primary);
+        color: var(--color-primary-bold);
       }
 
       ziro-nav-item:hover {
@@ -63,18 +67,14 @@ export class MyApp extends LitElement {
       <ziro-screen>
         <ziro-panel-set>
             <ziro-panel>  
-                <my-app-page-1></my-app-page-1>
+                <my-app-landing-page></my-app-landing-page>
             </ziro-panel>
             <ziro-panel>
-                <my-app-page-2></my-app-page-2>
-            </ziro-panel>
-            <ziro-panel>
-                <my-app-page-3></my-app-page-3>
+                <my-app-settings-page></my-app-settings-page>
             </ziro-panel>
         </ziro-panel-set>
         <ziro-nav>
             <ziro-nav-item selected>A</ziro-nav-item>
-            <ziro-nav-item>B</ziro-nav-item>
             <ziro-nav-item>C</ziro-nav-item>
         </ziro-nav>
     </ziro-screen>
@@ -82,7 +82,9 @@ export class MyApp extends LitElement {
   }
 
   stateUpdated() {
-    this.darkMode = appState.getState().colorMode === 'dark';
+    const appSnapshot = appState.getState();
+    this.darkMode = appSnapshot.colorMode === 'dark';
+    this.highContrast = appSnapshot.contrastMode === 'contrast';
   }
 }
 

@@ -7,8 +7,8 @@ export default css`
         --color-background-primary: #eee;
         --color-background-secondary: #fff;
 
-        --color-primary-bold: #190e01;
-        --color-secondary-bold: #07120f;
+        --color-primary-bold: #311b02;
+        --color-secondary-bold: #0e251f;
         --color-background-bold: #111;
         --color-background-secondary-bold: #222;
     }

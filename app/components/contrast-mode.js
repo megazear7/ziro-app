@@ -4,7 +4,7 @@ import appState from '../state/app.js';
 import { listen } from 'ziro-state';
 import './toggle-icon.js';
 
-export class MyAppColorMode extends LitElement {
+export class MyAppContrastMode extends LitElement {
   static get styles() {
     return [globals, css`
         :host {
@@ -26,17 +26,17 @@ export class MyAppColorMode extends LitElement {
 
   render() {
     return html`
-        <my-app-toggle-icon icon="sun" .on=${this.on} @toggle=${this.toggle}></my-app-toggle-icon>
+        <my-app-toggle-icon icon="light" .on=${this.on} @toggle=${this.toggle}></my-app-toggle-icon>
     `;
   }
 
   toggle() {
-    appState.toggleLights();
+    appState.toggleContrast();
   }
 
   stateUpdated() {
-    this.on = appState.getState().colorMode === 'dark';
+    this.on = appState.getState().contrastMode === 'contrast';
   }
 }
 
-window.customElements.define('my-app-color-mode', MyAppColorMode);
+window.customElements.define('my-app-contrast-mode', MyAppContrastMode);
