@@ -1,5 +1,7 @@
 # Ziro App
 
+An ultra opinionated web app development framework built on top of Netlify, LitElement, ZiroComponents, and ZiroState, and Rollup.
+
 Checkout an example at [ziro-app-example.alexlockhart.me](https://ziro-app-example.alexlockhart.me)
 
 ## TODO
@@ -9,13 +11,21 @@ Checkout an example at [ziro-app-example.alexlockhart.me](https://ziro-app-examp
 1. Add a way to include many other pages (primary pages being the slider, secondary pages hidden behind some menu?)
 1. Deactivate pages from a state management perspective when they are not being shown. This behavior should be added inside of ziro-components so that only the active panel gets rendered.
 
-## Serve
+## Local development
 
 ```
 npm run serve
 ```
 
 Open [localhost:8888](http://localhost:8888)
+
+## Live development
+
+```
+npm run live
+```
+
+Open the url that the Netlify CLI gives. This allows you to develop and see your changes on a live URL, accessibly on the public internet. You can also share the given url with others so they can see your changes live.
 
 ## Deploy
 

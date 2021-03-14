@@ -1,9 +1,8 @@
 import filesize from 'rollup-plugin-filesize';
 import {terser} from 'rollup-plugin-terser';
-import resolve from '@rollup/plugin-node-resolve';
+import nodeResolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
 import copy from 'rollup-plugin-copy'
-import { nodeResolve } from '@rollup/plugin-node-resolve';
 import cleanup from 'rollup-plugin-cleanup';
 
 export default {
@@ -18,11 +17,11 @@ export default {
   },
   plugins: [
     replace({'Reflect.decorate': 'undefined', preventAssignment: true}),
-    resolve(),
     nodeResolve(),
     copy({
       targets: [
-        { src: 'app/index.*', dest: 'site' },
+        { src: 'app/index.css', dest: 'site' },
+        { src: 'app/index.html', dest: 'site' },
         { src: 'app/manifest.json', dest: 'site' },
         { src: 'app/sw.js', dest: 'site' },
         { src: 'app/assets/**/*', dest: 'site/assets' }

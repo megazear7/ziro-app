@@ -27,6 +27,8 @@ export class MyApp extends LitElement {
       ziro-nav {
         background-color: var(--color-background-secondary);
         color: var(--color-background-secondary-bold);
+        position: fixed;
+        bottom: 0;
       }
 
       ziro-nav-item {

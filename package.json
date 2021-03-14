@@ -4,9 +4,10 @@
   "description": "A starter kit for creating web apps",
   "main": "index.js",
   "scripts": {
+    "live": "run-p netlify:live app:watch",
     "serve": "run-p netlify:serve app:watch",
     "netlify:serve": "netlify dev",
-    "app:serve": "es-dev-server --node-resolve --watch --root-dir site",
+    "netlify:live": "netlify dev --live",
     "app:watch": "rollup -c -w",
     "app:build": "rollup -c",
     "netlify:link": "netlify link"
@@ -20,7 +21,7 @@
   "license": "ISC",
   "dependencies": {
     "lit-element": "^2.4.0",
-    "ziro-components": "^1.0.1",
+    "ziro-components": "^1.0.2",
     "ziro-state": "^1.0.1"
   },
   "devDependencies": {
@@ -32,6 +33,7 @@
     "rollup": "^2.41.0",
     "rollup-plugin-cleanup": "^3.2.1",
     "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-copy-watch": "0.0.1",
     "rollup-plugin-filesize": "^9.1.1",
     "rollup-plugin-terser": "^7.0.2"
   }
