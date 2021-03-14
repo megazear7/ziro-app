@@ -1,7 +1,7 @@
 [build]
   functions = "api"
   publish = "site"
-  command = "npm run build"
+  command = "npm run app:build"
 
 [dev]
   framework = "#custom"
