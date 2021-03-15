@@ -33,7 +33,10 @@ export class MyAppSettingsPage extends LitElement {
         <my-app-color-mode></my-app-color-mode>
         <my-app-contrast-mode></my-app-contrast-mode>
       </section>
-      <section>Icons made by <a href="https://www.flaticon.com/authors/smartline" title="Smartline">Smartline</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></section>
+      <section>
+        <div>Icons made by <a href="https://www.flaticon.com/authors/smartline" title="Smartline">Smartline</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+      </section>
     `;
   }
 }

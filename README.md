@@ -1,6 +1,7 @@
 # Ziro App
 
-An ultra opinionated web app development framework built on top of Netlify, LitElement, ZiroComponents, and ZiroState, and Rollup.
+An ultra opinionated web app development framework built on top of Netlify, Lambdas, LitElement, ZiroComponents, and ZiroState, and Rollup.
+It makes heavy use of web components, ES modules, and other browser native APIs including service worker and web manifest.
 
 Checkout an example at [ziro-app-example.alexlockhart.me](https://ziro-app-example.alexlockhart.me)
 

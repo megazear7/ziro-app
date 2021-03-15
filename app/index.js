@@ -1,6 +1,8 @@
 import { LitElement, html, css } from 'lit-element';
 import { listen } from 'ziro-state';
 import appState from './state/app.js';
+import homeIcon from './icons/home.js';
+import gearIcon from './icons/gear.js';
 import globals from './styles/globals.js';
 import variables from './styles/variables.js';
 import lightStyles from './styles/mode-light.js';
@@ -34,6 +36,10 @@ export class MyApp extends LitElement {
       ziro-nav-item {
         background-color: var(--color-background-secondary);
         color: var(--color-background-secondary-bold);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 10px;
       }
 
       ziro-nav-item[selected] {
@@ -44,6 +50,17 @@ export class MyApp extends LitElement {
       ziro-nav-item:hover {
         background-color: var(--color-primary);
         color: var(--color-primary-bold);
+      }
+
+      ziro-nav-item svg {
+        margin: auto;
+        fill: var(--color-background-bold);
+        width: 30px;
+        height: 30px;
+      }
+
+      ziro-nav-item[selected] svg {
+        fill: var(--color-primary-bold);
       }
     `];
   }
@@ -76,8 +93,8 @@ export class MyApp extends LitElement {
             </ziro-panel>
         </ziro-panel-set>
         <ziro-nav>
-            <ziro-nav-item selected>A</ziro-nav-item>
-            <ziro-nav-item>C</ziro-nav-item>
+            <ziro-nav-item selected>${homeIcon}</ziro-nav-item>
+            <ziro-nav-item>${gearIcon}</ziro-nav-item>
         </ziro-nav>
     </ziro-screen>
     `;
