@@ -84,12 +84,12 @@ export class MyApp extends LitElement {
       <style>${!this.highContrast && this.darkMode ? darkStyles : css``}</style>
       <style>${this.highContrast && this.darkMode ? contrastDarkStyles : css``}</style>
       <style>${this.highContrast && !this.darkMode ? contrastLightStyles : css``}</style>
-      <ziro-screen>
+      <ziro-screen redirect>
         <ziro-panel-set>
-            <ziro-panel active>  
+            <ziro-panel path="/">
                 <my-app-landing-page></my-app-landing-page>
             </ziro-panel>
-            <ziro-panel>
+            <ziro-panel path="/settings">
                 <my-app-settings-page></my-app-settings-page>
             </ziro-panel>
         </ziro-panel-set>
