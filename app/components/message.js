@@ -1,10 +1,11 @@
 import { LitElement, html, css } from 'lit-element';
+import appData from '../data.js';
 import globals from '../styles/globals.js';
 import { listen } from 'ziro-state';
 import exampleState from '../state/example.js';
 import buttonStyles from '../styles/buttons.js';
 
-export class MyAppMessage extends LitElement {
+export class Message extends LitElement {
   static get styles() {
     return [globals, buttonStyles, css`
     `];
@@ -37,4 +38,4 @@ export class MyAppMessage extends LitElement {
   }
 }
 
-window.customElements.define('my-app-message', MyAppMessage);
+window.customElements.define(appData.prefix + 'message', Message);

@@ -1,10 +1,11 @@
 import { LitElement, html, css } from 'lit-element';
+import appData from '../data.js';
 import globals from '../styles/globals.js';
 import appState from '../state/app.js';
 import { listen } from 'ziro-state';
 import './toggle-icon.js';
 
-export class MyAppColorMode extends LitElement {
+export class ColorMode extends LitElement {
   static get styles() {
     return [globals, css`
         :host {
@@ -39,4 +40,4 @@ export class MyAppColorMode extends LitElement {
   }
 }
 
-window.customElements.define('my-app-color-mode', MyAppColorMode);
+window.customElements.define(appData.prefix + 'color-mode', ColorMode);

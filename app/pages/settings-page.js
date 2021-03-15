@@ -1,9 +1,10 @@
 import { LitElement, html, css } from 'lit-element';
+import appData from '../data.js';
 import globalStyles from '../styles/globals.js';
 import '../components/color-mode.js';
 import '../components/contrast-mode.js';
 
-export class MyAppSettingsPage extends LitElement {
+export class SettingsPage extends LitElement {
   static get styles() {
     return [globalStyles, css`
       :host {
@@ -41,4 +42,4 @@ export class MyAppSettingsPage extends LitElement {
   }
 }
 
-window.customElements.define('my-app-settings-page', MyAppSettingsPage);
+window.customElements.define(appData.prefix + 'settings-page', SettingsPage);

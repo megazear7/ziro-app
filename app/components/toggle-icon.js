@@ -1,11 +1,12 @@
 import { LitElement, html, css } from 'lit-element';
+import appData from '../data.js';
 import { classMap } from 'lit-html/directives/class-map';
 import globals from '../styles/globals.js';
 import iconStyles from '../styles/icons.js';
 import sunIcon from '../icons/sun.js';
 import lightIcon from '../icons/light.js';
 
-export class MyAppToggleIcon extends LitElement {
+export class ToggleIcon extends LitElement {
   static get styles() {
     return [globals, iconStyles, css`
         :host {
@@ -53,4 +54,4 @@ export class MyAppToggleIcon extends LitElement {
   }
 }
 
-window.customElements.define('my-app-toggle-icon', MyAppToggleIcon);
+window.customElements.define(appData.prefix + 'toggle-icon', ToggleIcon);

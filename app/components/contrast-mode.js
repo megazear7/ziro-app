@@ -1,10 +1,11 @@
 import { LitElement, html, css } from 'lit-element';
+import appData from '../data.js';
 import globals from '../styles/globals.js';
 import appState from '../state/app.js';
 import { listen } from 'ziro-state';
 import './toggle-icon.js';
 
-export class MyAppContrastMode extends LitElement {
+export class ContrastMode extends LitElement {
   static get styles() {
     return [globals, css`
         :host {
@@ -39,4 +40,4 @@ export class MyAppContrastMode extends LitElement {
   }
 }
 
-window.customElements.define('my-app-contrast-mode', MyAppContrastMode);
+window.customElements.define(appData.prefix + 'contrast-mode', ContrastMode);
