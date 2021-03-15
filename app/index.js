@@ -86,7 +86,7 @@ export class MyApp extends LitElement {
       <style>${this.highContrast && !this.darkMode ? contrastLightStyles : css``}</style>
       <ziro-screen>
         <ziro-panel-set>
-            <ziro-panel>  
+            <ziro-panel active>  
                 <my-app-landing-page></my-app-landing-page>
             </ziro-panel>
             <ziro-panel>

@@ -5,13 +5,6 @@ It makes heavy use of web components, ES modules, and other browser native APIs 
 
 Checkout an example at [ziro-app-example.alexlockhart.me](https://ziro-app-example.alexlockhart.me)
 
-## TODO
-
-1. Make ziro-cli which can be used to create a new app. The cli should be installable globally and provide a `ziro init my-app` command. This command should clone ziro-app and then do name replacements througout the files.
-1. Add routing
-1. Add a way to include many other pages (primary pages being the slider, secondary pages hidden behind some menu?)
-1. Deactivate pages from a state management perspective when they are not being shown. This behavior should be added inside of ziro-components so that only the active panel gets rendered.
-
 ## Local development
 
 ```
