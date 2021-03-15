@@ -31,6 +31,7 @@ export class MyApp extends LitElement {
         color: var(--color-background-secondary-bold);
         position: fixed;
         bottom: 0;
+        box-shadow: var(--shadow-large);
       }
 
       ziro-nav-item {

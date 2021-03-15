@@ -11,5 +11,7 @@ export default css`
         --color-secondary-bold: #c8e9df;
         --color-background-bold: #ddd;
         --color-background-secondary-bold: #eee;
+
+        --shadow-large: none;
     }
 `;

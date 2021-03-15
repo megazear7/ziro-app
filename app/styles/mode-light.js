@@ -11,5 +11,7 @@ export default css`
         --color-secondary-bold: #0e251f;
         --color-background-bold: #111;
         --color-background-secondary-bold: #222;
+
+        --shadow-large: 0 0 0px 0px rgba(0,0,0,0.3), 0 0 20px 0px rgba(0,0,0,0.2), 0 0 40px 0px rgba(0,0,0,0.1);
     }
 `;
