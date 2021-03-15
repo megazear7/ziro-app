@@ -4,5 +4,21 @@
   command = "npm run app:build"
 
 [dev]
+  command = "npm run app:serve"
   autoLaunch = false
   port = 8888
+  targetPort = 8001
+  framework = "#custom"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  # Define which paths this specific [[headers]] block will cover.
+  for = "/*"
+
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"

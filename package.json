@@ -4,11 +4,9 @@
   "description": "A starter kit for creating web apps",
   "main": "index.js",
   "scripts": {
-    "live": "run-p netlify:live app:watch",
-    "serve": "run-p netlify:serve app:watch",
-    "netlify:serve": "netlify dev",
-    "netlify:live": "netlify dev --live",
-    "app:watch": "rollup -c -w",
+    "serve": "netlify dev",
+    "live": "netlify dev --live",
+    "app:serve": "web-dev-server --node-resolve --root-dir app --watch",
     "app:build": "rollup -c",
     "netlify:link": "netlify link"
   },
@@ -35,6 +33,7 @@
     "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-copy-watch": "0.0.1",
     "rollup-plugin-filesize": "^9.1.1",
-    "rollup-plugin-terser": "^7.0.2"
+    "rollup-plugin-terser": "^7.0.2",
+    "web-dev-server": "^3.0.22"
   }
 }
