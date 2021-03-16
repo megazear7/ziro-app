@@ -84,7 +84,7 @@ export class MyApp extends LitElement {
       <style>${!this.highContrast && this.darkMode ? darkStyles : css``}</style>
       <style>${this.highContrast && this.darkMode ? contrastDarkStyles : css``}</style>
       <style>${this.highContrast && !this.darkMode ? contrastLightStyles : css``}</style>
-      <ziro-screen redirect>
+      <ziro-screen history>
         <ziro-panel-set>
             <ziro-panel path="/">
                 <my-app-landing-page></my-app-landing-page>
@@ -94,7 +94,7 @@ export class MyApp extends LitElement {
             </ziro-panel>
         </ziro-panel-set>
         <ziro-nav>
-            <ziro-nav-item selected>${homeIcon}</ziro-nav-item>
+            <ziro-nav-item>${homeIcon}</ziro-nav-item>
             <ziro-nav-item>${gearIcon}</ziro-nav-item>
         </ziro-nav>
     </ziro-screen>
