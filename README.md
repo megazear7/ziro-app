@@ -23,7 +23,7 @@ Open the url that the Netlify CLI gives. This allows you to develop and see your
 
 ## Deploy
 
-Push changes to the `main` branch.
+Update the service worker cache version number in  `src/sw.js` and then push changes to the `main` branch.
 
 ## Overview
 
