@@ -9,6 +9,13 @@ export default css`
         --size-text-x3: 30px;
         --size-text-x4: 36px;
 
+        --size-line-height-small: 28px;
+        --size-line-height-medium: 32px;
+        --size-line-height-large: 36px;
+        --size-line-height-x2: 48px;
+        --size-line-height-x3: 60px;
+        --size-line-height-x4: 72px;
+
         --size-space-small: 10px;
         --size-space-medium: 20px;
         --size-space-large: 30px;
