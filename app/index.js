@@ -16,6 +16,33 @@ import 'ziro-components';
 export class MyApp extends LitElement {
   static get styles() {
     return [globals, variables, css`
+      :host {
+        --zc-primary-color: var(--color-primary) !important;
+        --zc-primary-text-color: var(--color-primary-bold) !important;
+        --zc-secondary-color: var(--color-secondary) !important;
+        --zc-secondary-text-color: var(--color-secondary-bold) !important;
+        --zc-background-color: var(--color-background-primary) !important;
+        --zc-background-text-color: var(--color-background-bold) !important;
+        --zc-selected-color: var(--color-secondary) !important;
+        --zc-selected-text-color: var(--color-secondary-bold) !important;
+
+        --zc-border-radius: 3px !important;
+
+        --zc-space-small: 10px !important;
+        --zc-space-medium: 20px !important;
+        --zc-space-large: 30px !important;
+        --zc-space-x2: 40px !important;
+        --zc-space-x3: 60px !important;
+
+        --zc-font-size-small: 14px !important;
+        --zc-font-size-medium: 16px !important;
+        --zc-font-size-large: 20px !important;
+        --zc-font-size-x2: 26px !important;
+        --zc-font-size-x3: 36px !important;
+
+        --zc-transition-speed: 300ms !important;
+      }
+
       ziro-panel {
         background-color: var(--color-background-primary);
         color: var(--color-background-primary-bold);
@@ -40,7 +67,6 @@ export class MyApp extends LitElement {
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding: 10px;
       }
 
       ziro-nav-item[selected] {
@@ -55,7 +81,7 @@ export class MyApp extends LitElement {
 
       ziro-nav-item svg {
         margin: auto;
-        fill: var(--color-background-bold);
+        fill: var(--color-primary-bold);
         width: 30px;
         height: 30px;
       }

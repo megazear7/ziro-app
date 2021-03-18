@@ -36,12 +36,14 @@ export class LandingPage extends LitElement {
         class="small-page"
         @ziro-slide-page-closed=${() => this.slideOutPageOpen = false}
         .active=${this.slideOutPageOpen}>
+        <ziro-closer>&larr; Close</ziro-closer>
         <my-app-credits-page></my-app-credits-page>
       </ziro-slide-page>
 
       <ziro-slide-page
         @ziro-slide-page-closed=${() => this.slideOutFullPageOpen = false}
         .active=${this.slideOutFullPageOpen}>
+        <ziro-closer>&larr; Close</ziro-closer>
         <my-app-credits-page></my-app-credits-page>
       </ziro-slide-page>
     `;
