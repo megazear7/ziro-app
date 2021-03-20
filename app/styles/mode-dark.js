@@ -4,13 +4,15 @@ export default css`
     :host {
         --color-primary: #f78b08;
         --color-secondary: #49b695;
-        --color-background-primary: #111;
-        --color-background-secondary: #222;
+        --color-background-primary: #222;
+        --color-background-secondary: #444;
+        --color-grey: #ccc;
 
-        --color-primary-bold: #fddcb5;
-        --color-secondary-bold: #c8e9df;
-        --color-background-bold: #ddd;
-        --color-background-secondary-bold: #eee;
+        --color-primary-bold: #fcc383;
+        --color-secondary-bold: #a4dbca;
+        --color-background-bold: #ccc;
+        --color-background-secondary-bold: #ddd;
+        --color-grey-bold: #222;
 
         --shadow-large: none;
     }
