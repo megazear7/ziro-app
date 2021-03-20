@@ -3,6 +3,7 @@ import { listen } from 'ziro-state';
 import appState from './state/app.js';
 import homeIcon from './icons/home.js';
 import gearIcon from './icons/gear.js';
+import plusIcon from './icons/plus.js';
 import globals from './styles/globals.js';
 import variables from './styles/variables.js';
 import lightStyles from './styles/mode-light.js';
@@ -10,6 +11,7 @@ import darkStyles from './styles/mode-dark.js';
 import contrastLightStyles from './styles/mode-contrast-light.js';
 import contrastDarkStyles from './styles/mode-contrast-dark.js';
 import './pages/landing-page.js';
+import './pages/builder-page.js';
 import './pages/settings-page.js';
 import 'ziro-components';
 
@@ -115,12 +117,16 @@ export class MyApp extends LitElement {
             <ziro-panel path="/">
                 <my-app-landing-page></my-app-landing-page>
             </ziro-panel>
+            <ziro-panel path="/builder">
+                <my-app-builder-page></my-app-builder-page>
+            </ziro-panel>
             <ziro-panel path="/settings">
                 <my-app-settings-page></my-app-settings-page>
             </ziro-panel>
         </ziro-panel-set>
         <ziro-nav>
             <ziro-nav-item>${homeIcon}</ziro-nav-item>
+            <ziro-nav-item>${plusIcon}</ziro-nav-item>
             <ziro-nav-item>${gearIcon}</ziro-nav-item>
         </ziro-nav>
     </ziro-screen>
