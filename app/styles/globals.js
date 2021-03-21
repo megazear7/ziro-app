@@ -45,11 +45,20 @@ export default css`
     a {
         color: var(--color-secondary);
         text-decoration: none;
+        transition: color var(--transition-speed-normal);
     }
 
     a:hover, a:focus {
         color: var(--color-primary);
-        text-decoration: underline;
+    }
+
+    button:hover, button:focus {
+        background-color: var(--color-primary);
+        color: var(--color-primary-bold);
+    }
+
+    a:focus, button:focus {
+        outline: none;
     }
 
     ziro-slide-page::part(inner) {
@@ -60,11 +69,17 @@ export default css`
     ziro-slide-page::part(outer) {
         background-color: var(--color-background-primary);
         box-shadow: var(--shadow-large);
-        transition: left 500ms ease-in-out 100ms;
+        transition: left var(--transition-speed-slow) ease-in-out 100ms;
     }
 
     ziro-slide-page.small-page::part(outer) {
         border-right: 5px solid var(--color-primary);
         width: 90%;
+    }
+
+    ziro-wizard {
+        background-color: var(--color-background-primary);
+        box-shadow: var(--shadow-large);
+        transition: left var(--transition-speed-slow) ease-in-out 100ms;
     }
 `;

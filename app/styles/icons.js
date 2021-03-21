@@ -16,7 +16,11 @@ export default css`
         height: var(--size-text-x2);
     }
 
-    .icon:hover svg {
+    .icon:focus, .icon:hover {
+        background-color: transparent;
+    }
+
+    .icon:focus svg {
         fill: var(--color-primary);
         filter: drop-shadow( 0px 0px 5px var(--color-primary));
     }
@@ -31,5 +35,12 @@ export default css`
 
     .icon.active svg {
         fill: var(--color-primary);
+    }
+
+    @media only screen and (hover: hover) {
+        .icon:hover svg, .icon:focus svg {
+            fill: var(--color-primary);
+            filter: drop-shadow( 0px 0px 5px var(--color-primary));
+        }
     }
 `;
