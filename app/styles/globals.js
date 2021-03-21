@@ -10,6 +10,7 @@ export default css`
     h1 {
         font-size: var(--size-text-x4);
         color: var(--color-primary);
+        text-align: center;
     }
 
     h2 {
@@ -81,5 +82,32 @@ export default css`
         background-color: var(--color-background-primary);
         box-shadow: var(--shadow-large);
         transition: left var(--transition-speed-slow) ease-in-out 100ms;
+    }
+
+    * {
+        --zc-primary-color: var(--color-primary);
+        --zc-primary-text-color: var(--color-primary-bold);
+        --zc-secondary-color: var(--color-secondary);
+        --zc-secondary-text-color: var(--color-secondary-bold);
+        --zc-background-color: var(--color-background-primary);
+        --zc-background-text-color: var(--color-background-bold);
+        --zc-selected-color: var(--color-grey);
+        --zc-selected-text-color: var(--color-grey-bold);
+
+        --zc-border-radius: 3px;
+
+        --zc-space-small: 10px;
+        --zc-space-medium: 20px;
+        --zc-space-large: 30px;
+        --zc-space-x2: 40px;
+        --zc-space-x3: 60px;
+
+        --zc-font-size-small: 14px;
+        --zc-font-size-medium: 16px;
+        --zc-font-size-large: 20px;
+        --zc-font-size-x2: 26px;
+        --zc-font-size-x3: 36px;
+
+        --zc-transition-speed: 300ms;
     }
 `;

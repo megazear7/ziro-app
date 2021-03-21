@@ -34,7 +34,8 @@ export class BuilderPage extends LitElement {
 
   render() {
     return html`
-      <h1>Lorem Ipsum</h1>
+      <h1>Builder Page</h1>
+      <section><my-app-message></my-app-message></section>
       <section>
         <button class="btn" @click=${() => this.startWizard = true}>Open Wizard</button>
       </section>

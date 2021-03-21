@@ -18,33 +18,6 @@ import 'ziro-components';
 export class MyApp extends LitElement {
   static get styles() {
     return [globals, variables, css`
-      :host {
-        --zc-primary-color: var(--color-primary) !important;
-        --zc-primary-text-color: var(--color-primary-bold) !important;
-        --zc-secondary-color: var(--color-secondary) !important;
-        --zc-secondary-text-color: var(--color-secondary-bold) !important;
-        --zc-background-color: var(--color-background-primary) !important;
-        --zc-background-text-color: var(--color-background-bold) !important;
-        --zc-selected-color: var(--color-secondary) !important;
-        --zc-selected-text-color: var(--color-secondary-bold) !important;
-
-        --zc-border-radius: 3px !important;
-
-        --zc-space-small: 10px !important;
-        --zc-space-medium: 20px !important;
-        --zc-space-large: 30px !important;
-        --zc-space-x2: 40px !important;
-        --zc-space-x3: 60px !important;
-
-        --zc-font-size-small: 14px !important;
-        --zc-font-size-medium: 16px !important;
-        --zc-font-size-large: 20px !important;
-        --zc-font-size-x2: 26px !important;
-        --zc-font-size-x3: 36px !important;
-
-        --zc-transition-speed: 300ms !important;
-      }
-
       ziro-panel {
         background-color: var(--color-background-primary);
         color: var(--color-background-primary-bold);
@@ -61,6 +34,7 @@ export class MyApp extends LitElement {
         position: fixed;
         bottom: 0;
         box-shadow: var(--shadow-large);
+        border-top: none;
       }
 
       ziro-nav-item {
@@ -71,14 +45,10 @@ export class MyApp extends LitElement {
         align-items: center;
       }
 
-      ziro-nav-item[selected] {
-        background-color: var(--color-primary);
-        color: var(--color-primary-bold);
-      }
-
-      ziro-nav-item:hover {
-        background-color: var(--color-primary);
-        color: var(--color-primary-bold);
+      ziro-nav-item::part(button) {
+        padding: var(--size-space-small);
+        background-color: var(--color-background-secondary);
+        color: var(--color-background-secondary-bold);
       }
 
       ziro-nav-item svg {
@@ -86,10 +56,15 @@ export class MyApp extends LitElement {
         fill: var(--color-primary-bold);
         width: 30px;
         height: 30px;
+        transition: fill var(--transition-speed-normal);
       }
 
       ziro-nav-item[selected] svg {
-        fill: var(--color-primary-bold);
+        fill: var(--color-primary);
+      }
+
+      ziro-nav-item:hover svg {
+        fill: var(--color-primary);
       }
     `];
   }

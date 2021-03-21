@@ -29,7 +29,7 @@ export class SettingsPage extends LitElement {
 
   render() {
     return html`
-      <h2>Settings</h2>
+      <h1>Settings</h1>
       <section id="toggle-settings">
         <my-app-color-mode></my-app-color-mode>
         <my-app-contrast-mode></my-app-contrast-mode>
