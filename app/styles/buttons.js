@@ -24,6 +24,7 @@ export default css`
 
     .btn-group button, .btn-group ziro-button::part(button) {
         width: 100%;
+        height: 100%;
         max-width: 500px;
         border-radius: 0;
     }

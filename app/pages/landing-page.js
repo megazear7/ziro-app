@@ -28,8 +28,8 @@ export class LandingPage extends LitElement {
       <h1>Landing Page</h1>
       <section>
         <div class="btn-group">
-          <ziro-button @click=${() => this.slideOutPageOpen = true}>Slide Out Page</ziro-button>
-          <ziro-button @click=${() => this.slideOutFullPageOpen = true}>Slide Out Full Page</ziro-button>
+          <ziro-button @click=${() => this.slideOutPageOpen = true}>Open first</ziro-button>
+          <ziro-button @click=${() => this.slideOutFullPageOpen = true}>Open second</ziro-button>
         </div>
       </section>
       <section><my-app-share></my-app-share></section>
