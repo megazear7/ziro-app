@@ -36,8 +36,9 @@ export class BuilderPage extends LitElement {
     return html`
       <h1>Builder Page</h1>
       <section><my-app-message></my-app-message></section>
+      <br>
       <section>
-        <button class="btn" @click=${() => this.startWizard = true}>Open Wizard</button>
+        <ziro-button class="btn" @click=${() => this.startWizard = true}>Open Wizard</ziro-button>
       </section>
 
       <ziro-wizard .active=${this.startWizard} @ziro-wizard-closed=${() => this.startWizard = false} speed="500">

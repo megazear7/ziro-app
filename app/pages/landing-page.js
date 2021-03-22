@@ -25,10 +25,12 @@ export class LandingPage extends LitElement {
 
   render() {
     return html`
+      <h1>Landing Page</h1>
       <section>
-        <h1>Landing Page</h1>
-        <button class="btn" @click=${() => this.slideOutPageOpen = true}>Slide Out Page</button>
-        <button class="btn" @click=${() => this.slideOutFullPageOpen = true}>Slide Out Full Page</button>
+        <div class="btn-group">
+          <ziro-button @click=${() => this.slideOutPageOpen = true}>Slide Out Page</ziro-button>
+          <ziro-button @click=${() => this.slideOutFullPageOpen = true}>Slide Out Full Page</ziro-button>
+        </div>
       </section>
       <section><my-app-share></my-app-share></section>
 

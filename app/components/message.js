@@ -25,7 +25,7 @@ export class Message extends LitElement {
   render() {
     return html`
       <h2>${this.text}</h2>
-      <button class="btn" @click=${this.updateMessage}>Load Title</button>
+      <ziro-button class="btn" @click=${this.updateMessage}>Load Title</ziro-button>
     `;
   }
 

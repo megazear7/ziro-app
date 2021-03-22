@@ -11,6 +11,7 @@ export default css`
         font-size: var(--size-text-x4);
         color: var(--color-primary);
         text-align: center;
+        margin: 0 0 32px 0;
     }
 
     h2 {

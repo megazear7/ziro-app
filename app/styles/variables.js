@@ -21,7 +21,7 @@ export default css`
         --size-space-large: 30px;
         --size-space-extra-large: 50px;
 
-        --border-radius: 3px;
+        --border-radius: 5px;
         --transition-speed-fast: 150ms;
         --transition-speed-normal: 300ms;
         --transition-speed-slow: 500ms;
