@@ -34,18 +34,22 @@ export class BuilderPage extends LitElement {
 
   render() {
     return html`
-      <h1>Builder Page</h1>
-      <section><my-app-message></my-app-message></section>
-      <br>
+      <h1>Add Entry</h1>
+
       <section>
-        <ziro-button class="btn" @click=${() => this.startWizard = true}>Open Wizard</ziro-button>
+        <ziro-button class="btn" @click=${() => this.startWizard = true}>Add entry</ziro-button>
       </section>
 
       <ziro-wizard .active=${this.startWizard} @ziro-wizard-closed=${() => this.startWizard = false} speed="500">
         <ziro-panel>
             <section>
-              <h3>Panel 1</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <h3>Favorites</h3>
+              <p>Any information that you do not have you can skip.</p>
+              <br>
+              <ziro-input placeholder="Enter favorite game" hint="Favorite game"></ziro-input>
+              <br>
+              <ziro-input placeholder="Enter favorite movie" hint="Favorite movie"></ziro-input>
+              <br><br>
               <ziro-wizard-nav>
                 <span slot="previous">Close</span>
                 <span slot="next">Next &rarr;</span>
@@ -54,8 +58,13 @@ export class BuilderPage extends LitElement {
         </ziro-panel>
         <ziro-panel>
             <section>
-              <h3>Panel 2</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <h3>Info</h3>
+              <p>Any information that you do not have you can skip.</p>
+              <br>
+              <ziro-input placeholder="Enter description" hint="Email"></ziro-input>
+              <br>
+              <ziro-input placeholder="Enter size" hint="Size"></ziro-input>
+              <br><br>
               <ziro-wizard-nav>
                 <span slot="previous">&larr; Previous</span>
                 <span slot="next">Next &rarr;</span>
@@ -64,11 +73,11 @@ export class BuilderPage extends LitElement {
         </ziro-panel>
         <ziro-panel>
             <section>
-              <h3>Panel 3</h3>
+              <h3>Review</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
               <ziro-wizard-nav>
                 <span slot="previous">&larr; Previous</span>
-                <span slot="next">Finish</span>
+                <span slot="next">Save</span>
               </ziro-wizard-nav>
             </section>
         </ziro-panel>
