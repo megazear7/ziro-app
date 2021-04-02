@@ -33,28 +33,6 @@ export class LandingPage extends LitElement {
         </div>
       </section>
       <section><my-app-share></my-app-share></section>
-      <section>
-        <div>
-          <br>
-          <br>
-          <ziro-finder placeholder="Search by movie title such as 'moon' or 'lord of the rings'" hint="Movie title" query="">
-            <ziro-item>Lord of the Rings</ziro-item>
-            <ziro-item>Interstellar</ziro-item>
-            <ziro-item>Avengers: End Game</ziro-item>
-            <ziro-item>Alien</ziro-item>
-            <ziro-item>Gone with the Wind</ziro-item>
-            <ziro-item>The Hobbit</ziro-item>
-            <ziro-item>Harry Potter</ziro-item>
-            <ziro-item>Green Moon</ziro-item>
-            <ziro-item>Blue Moon</ziro-item>
-            <ziro-item>Orange Moon</ziro-item>
-            <ziro-item>Red Moon</ziro-item>
-            <ziro-item>Yellow Moon</ziro-item>
-            <ziro-item>Example Moon</ziro-item>
-          </ziro-finder>
-          <br>
-        </div>
-      </section>
 
       <ziro-slide-page
         class="small-page"

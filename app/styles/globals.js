@@ -5,38 +5,44 @@ export default css`
         color: var(--color-background-bold);
         font-size: var(--size-text-medium);
         line-height: var(--size-line-height-medium);
+        text-align: center;
     }
 
     h1 {
         font-size: var(--size-text-x4);
         color: var(--color-primary);
-        text-align: center;
         margin: 0 0 32px 0;
+        text-align: center;
     }
 
     h2 {
         font-size: var(--size-text-x3);
         color: var(--color-secondary);
+        text-align: center;
     }
     
     h3 {
         font-size: var(--size-text-x2);
         color: var(--color-background-bold);
+        text-align: center;
     }
     
     h4 {
         font-size: var(--size-text-large);
         color: var(--color-background-bold);
+        text-align: center;
     }
     
     h5 {
         font-size: var(--size-text-medium);
         color: var(--color-background-bold);
+        text-align: center;
     }
     
     h6 {
         font-size: var(--size-text-small);
         color: var(--color-background-bold);
+        text-align: center;
     }
 
     section {
