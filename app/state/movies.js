@@ -16,6 +16,10 @@ class MoviesState extends ZiroState {
     addMovie(movie) {
         this.state.movies = [ ...this.state.movies, movie ];
     }
+
+    removeMovie(movie) {
+        this.state.movies = this.state.movies.filter(filterMovie => filterMovie.title !== movie.title);
+    }
 }
 
 export default new MoviesState('movie-state');

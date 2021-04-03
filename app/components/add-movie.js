@@ -85,7 +85,7 @@ export class AddMovie extends LitElement {
                 max="6"
                 placeholder="Production company"
                 hint="Movie title"
-                value=${this.productionCompany}
+                .value=${this.productionCompany}
                 @ziro-finder-changed=${e => this.productionCompany = e.detail}
                 query=${this.productionCompanyQuery || ''}
                 @ziro-finder-input=${e => this.productionCompanyQuery = e.detail }>
@@ -120,7 +120,7 @@ export class AddMovie extends LitElement {
         <ziro-panel>
             <section>
               <h3>Review</h3>
-              <h3>${this.title}</h3>
+              <h4>${this.title}</h4>
               <p>${this.description}</p>
               <p>${this.rating}</p>
               <p>${this.productionCompany}</p>

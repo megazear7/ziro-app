@@ -2,6 +2,7 @@ import {css} from 'lit-element';
 
 export default css`
     .btn {
+        width: 100%;
         background: none;
         background-color: var(--color-grey);
         color: var(--color-grey-bold);
@@ -34,11 +35,13 @@ export default css`
     }
 
     .btn-group button:first-child, .btn-group ziro-button:first-child::part(button) {
-        border-radius: var(--border-radius) 0 0 var(--border-radius);
+        border-top-left-radius: var(--border-radius);
+        border-bottom-left-radius: var(--border-radius);
     }
 
     .btn-group button:last-child, .btn-group ziro-button:last-child::part(button) {
-        border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        border-top-right-radius: var(--border-radius);
+        border-bottom-right-radius: var(--border-radius);
     }
 
     .btn-group button, .btn-group ziro-button {

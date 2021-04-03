@@ -3,10 +3,11 @@ import appData from '../data.js';
 import globals from '../styles/globals.js';
 import { listen } from 'ziro-state';
 import movieState from '../state/movies.js';
+import buttonStyles from '../styles/buttons.js';
 
 export class Movies extends LitElement {
   static get styles() {
-    return [globals, css`
+    return [globals, buttonStyles, css`
     `];
   }
 
@@ -45,6 +46,7 @@ export class Movies extends LitElement {
           <p>${this.selectedMovie.description}</p>
           <p>${this.selectedMovie.rating}</p>
           <p>${this.selectedMovie.productionCompany}</p>
+          <button class="btn" @click=${() => this.removeMovie(this.selectedMovie)}>Delete</button>
         `: ''}
       </ziro-slide-page>
     `;
@@ -53,6 +55,11 @@ export class Movies extends LitElement {
   openMovie(movie) {
     this.selectedMovie = movie;
     this.movieOpen = true;
+  }
+
+  removeMovie(movie) {
+    movieState.removeMovie(movie);
+    this.movieOpen = false;
   }
 
   stateUpdated() {
