@@ -17,7 +17,8 @@ export class AddMovie extends LitElement {
       title: { type: String },
       description: { type: String },
       rating: { type: String },
-      productionCompany: { type: String }
+      productionCompany: { type: String },
+      productionCompanyQuery: { type: String }
     };
   }
 
@@ -43,11 +44,26 @@ export class AddMovie extends LitElement {
             <section>
               <h3>Add movie</h3>
               <br>
-              <ziro-input @ziro-selector-input=${e => this.title = e.detail} placeholder="Enter movie title" hint="Title"></ziro-input>
+              <ziro-input
+                .value=${this.title}
+                @ziro-selector-input=${e => this.title = e.detail}
+                placeholder="Enter movie title"
+                hint="Title">
+              </ziro-input>
               <br>
-              <ziro-input @ziro-selector-input=${e => this.description = e.detail} placeholder="Enter movie description" hint="Description"></ziro-input>
+              <ziro-input
+                .value=${this.description}
+                @ziro-selector-input=${e => this.description = e.detail}
+                placeholder="Enter movie description"
+                hint="Description">
+              </ziro-input>
               <br>
-              <ziro-input @ziro-selector-input=${e => this.rating = e.detail} placeholder="Enter movie rating" hint="rating"></ziro-input>
+              <ziro-input
+                .value=${this.rating}
+                @ziro-selector-input=${e => this.rating = e.detail}
+                placeholder="Enter movie rating"
+                hint="rating">
+              </ziro-input>
               <br><br>
               <ziro-wizard-nav>
                 <span slot="previous">Close</span>
@@ -57,7 +73,13 @@ export class AddMovie extends LitElement {
         </ziro-panel>
         <ziro-panel>
             <section>
-              <ziro-finder @ziro-finder-changed=${e => this.productionCompany = e.detail} placeholder="Production company" hint="Movie title" query="">
+              <ziro-finder
+                value=${this.productionCompany}
+                @ziro-finder-changed=${e => this.productionCompany = e.detail}
+                placeholder="Production company" hint="Movie title"
+                query=${this.productionCompanyQuery || ''}
+                @ziro-finder-input=${e => this.productionCompanyQuery = e.detail }>
+
                 <ziro-item>Paramount Pictures</ziro-item>
                 <ziro-item>Universal Pictures</ziro-item>
                 <ziro-item>20th Century Studios</ziro-item>
@@ -108,7 +130,13 @@ export class AddMovie extends LitElement {
       description: this.description,
       rating: this.rating,
       productionCompany: this.productionCompany
-    })
+    });
+
+    this.title = '';
+    this.description = '';
+    this.rating = '';
+    this.productionCompany = '';
+    this.productionCompanyQuery = '';
   }
 
   stateUpdated() {
