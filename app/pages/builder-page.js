@@ -22,6 +22,8 @@ export class BuilderPage extends LitElement {
 
   static get properties() {
     return {
+      slideOutPageOpen: { type: Boolean },
+      slideOutFullPageOpen: { type: Boolean }
     };
   }
 
@@ -29,6 +31,27 @@ export class BuilderPage extends LitElement {
     return html`
       <h1>Add Movie</h1>
       <my-app-add-movie></my-app-add-movie>
+      <section>
+        <div class="btn-group">
+          <ziro-button @click=${() => this.slideOutPageOpen = true}>Open first</ziro-button>
+          <ziro-button @click=${() => this.slideOutFullPageOpen = true}>Open second</ziro-button>
+        </div>
+      </section>
+
+      <ziro-slide-page
+        class="small-page"
+        @ziro-slide-page-closed=${() => this.slideOutPageOpen = false}
+        .active=${this.slideOutPageOpen}>
+        <ziro-closer>&larr; Close</ziro-closer>
+        <my-app-credits-page></my-app-credits-page>
+      </ziro-slide-page>
+
+      <ziro-slide-page
+        @ziro-slide-page-closed=${() => this.slideOutFullPageOpen = false}
+        .active=${this.slideOutFullPageOpen}>
+        <ziro-closer>&larr; Close</ziro-closer>
+        <my-app-credits-page></my-app-credits-page>
+      </ziro-slide-page>
     `;
   }
 }

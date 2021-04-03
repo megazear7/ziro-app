@@ -8,15 +8,16 @@ export class Share extends LitElement {
   static get styles() {
     return [globals, iconStyles, css`
       :host {
-        display: flex;
-        align-items: center;
+        display: block;
       }
 
       button {
-        margin-right: var(--size-space-small);
+        margin: auto;
+        display: block;
       }
 
       textarea {
+        text-align: center;
         padding: 0;
         height: 16px;
         background: none;

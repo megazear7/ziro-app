@@ -12,7 +12,9 @@ export class Movies extends LitElement {
 
   static get properties() {
     return {
-      movies: { type: Array, attribute: false }
+      movies: { type: Array, attribute: false },
+      movieOpen: { type: Boolean },
+      selectedMovie: { type: Object }
     };
   }
 
@@ -23,10 +25,34 @@ export class Movies extends LitElement {
 
   render() {
     return html`
-      ${ this.movies.map(movie => html`
-        <h2>${movie.title}</h2>
-      `)}
+      <ziro-finder
+        max="6"
+        placeholder="Find movies"
+        hint="Movies"
+        @ziro-finder-changed=${e => this.openMovie(e.detail) }>
+        ${ this.movies.map(movie => html`
+            <ziro-item value=${JSON.stringify(movie)}>${movie.title}</ziro-item>
+        `)}
+      </ziro-finder>
+
+      <ziro-slide-page
+        @ziro-slide-page-closed=${() => this.movieOpen = false}
+        .active=${this.movieOpen}>
+        <ziro-closer>&larr; Close</ziro-closer>
+        ${ this.selectedMovie ? html`
+          <br>
+          <h3>${this.selectedMovie.title}</h3>
+          <p>${this.selectedMovie.description}</p>
+          <p>${this.selectedMovie.rating}</p>
+          <p>${this.selectedMovie.productionCompany}</p>
+        `: ''}
+      </ziro-slide-page>
     `;
+  }
+
+  openMovie(movie) {
+    this.selectedMovie = movie;
+    this.movieOpen = true;
   }
 
   stateUpdated() {

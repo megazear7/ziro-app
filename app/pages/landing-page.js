@@ -18,40 +18,16 @@ export class LandingPage extends LitElement {
 
   static get properties() {
     return {
-      message: { type: String },
-      slideOutPageOpen: { type: Boolean },
-      slideOutFullPageOpen: { type: Boolean }
+      message: { type: String }
     };
   }
 
   render() {
     return html`
-      <h1>Landing Page</h1>
-      <section>
-        <div class="btn-group">
-          <ziro-button @click=${() => this.slideOutPageOpen = true}>Open first</ziro-button>
-          <ziro-button @click=${() => this.slideOutFullPageOpen = true}>Open second</ziro-button>
-        </div>
-      </section>
-      <section><my-app-share></my-app-share></section>
+      <h1>Your movies</h1>
       <section>
         <my-app-movies></my-app-movies>
       </section>
-
-      <ziro-slide-page
-        class="small-page"
-        @ziro-slide-page-closed=${() => this.slideOutPageOpen = false}
-        .active=${this.slideOutPageOpen}>
-        <ziro-closer>&larr; Close</ziro-closer>
-        <my-app-credits-page></my-app-credits-page>
-      </ziro-slide-page>
-
-      <ziro-slide-page
-        @ziro-slide-page-closed=${() => this.slideOutFullPageOpen = false}
-        .active=${this.slideOutFullPageOpen}>
-        <ziro-closer>&larr; Close</ziro-closer>
-        <my-app-credits-page></my-app-credits-page>
-      </ziro-slide-page>
     `;
   }
 }

@@ -91,6 +91,18 @@ export default css`
         transition: left var(--transition-speed-slow) ease-in-out 100ms;
     }
 
+    .center {
+        display: flex;
+    }
+
+    .center > *:first-child {
+        margin-left: auto;
+    }
+
+    .center > *:last-child {
+        margin-right: auto;
+    }
+
     * {
         --zc-primary-color: var(--color-primary);
         --zc-primary-text-color: var(--color-primary-bold);

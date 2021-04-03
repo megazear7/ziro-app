@@ -30,13 +30,16 @@ export class SettingsPage extends LitElement {
   render() {
     return html`
       <h1>Settings</h1>
-      <section id="toggle-settings">
+      <section class="center" id="toggle-settings">
         <my-app-color-mode></my-app-color-mode>
         <my-app-contrast-mode></my-app-contrast-mode>
       </section>
+      <section class="center">
+        <my-app-share></my-app-share>
+      </section>
       <section>
-        <div>Icons made by <a href="https://www.flaticon.com/authors/smartline" title="Smartline">Smartline</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-        <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        <p>Icons made by <a href="https://www.flaticon.com/authors/smartline" title="Smartline">Smartline</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
+        <p>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
       </section>
     `;
   }
