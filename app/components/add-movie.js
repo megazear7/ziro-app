@@ -8,6 +8,13 @@ import buttonStyles from '../styles/buttons.js';
 export class AddMovie extends LitElement {
   static get styles() {
     return [globals, buttonStyles, css`
+      :host {
+        display: block;
+      }
+
+      #production-company {
+        margin-bottom: var(--size-space-medium);
+      }
     `];
   }
 
@@ -71,9 +78,10 @@ export class AddMovie extends LitElement {
               </ziro-wizard-nav>
             </section>
         </ziro-panel>
-        <ziro-panel>
+        <ziro-panel @ziro-panel-changed=${() => this.shadowRoot.getElementById('production-company').updateItems()}>
             <section>
               <ziro-finder
+                id="production-company"
                 value=${this.productionCompany}
                 @ziro-finder-changed=${e => this.productionCompany = e.detail}
                 placeholder="Production company" hint="Movie title"
