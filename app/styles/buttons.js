@@ -13,13 +13,6 @@ export default css`
         transition: border-color var(--transition-speed-normal) ease-in-out, background-color var(--transition-speed-normal) ease-in-out, color var(--transition-speed-normal) ease-in-out;
     }
 
-    .btn-block {
-        display: block;
-        width: 100%;
-        box-sizing: border-box;
-        text-align: center;
-    }
-
     .btn:hover {
         background-color: var(--color-primary);
         color: var(--color-primary-bold);

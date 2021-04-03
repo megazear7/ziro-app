@@ -4,6 +4,7 @@ import globals from '../styles/globals.js';
 import buttons from '../styles/buttons.js';
 import '../components/message.js';
 import '../components/share.js';
+import '../components/movies.js';
 import '../pages/credits-page.js';
 
 export class LandingPage extends LitElement {
@@ -33,6 +34,9 @@ export class LandingPage extends LitElement {
         </div>
       </section>
       <section><my-app-share></my-app-share></section>
+      <section>
+        <my-app-movies></my-app-movies>
+      </section>
 
       <ziro-slide-page
         class="small-page"
