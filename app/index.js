@@ -67,6 +67,10 @@ export class MyApp extends LitElement {
       ziro-nav-item:hover svg {
         fill: var(--color-primary);
       }
+
+      ziro-nav-item:focus-within svg {
+        fill: var(--color-primary);
+      }
     `];
   }
 

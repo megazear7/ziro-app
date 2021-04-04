@@ -55,7 +55,7 @@ export class AddMovie extends LitElement {
               <h3>Add movie</h3>
               <br>
               <ziro-input
-                @keydown=${e => this.isNavKey(e) && this.focusInput('description')}
+                @keydown=${e => this.isEnterKey(e) && this.focusInput('description')}
                 .value=${this.title}
                 name="title"
                 @ziro-selector-input=${e => this.title = e.detail}
@@ -64,7 +64,7 @@ export class AddMovie extends LitElement {
               </ziro-input>
               <br>
               <ziro-input
-                @keydown=${e => this.isNavKey(e) && this.focusInput('rating')}
+                @keydown=${e => this.isEnterKey(e) && this.focusInput('rating')}
                 .value=${this.description}
                 name="description"
                 @ziro-selector-input=${e => this.description = e.detail}
@@ -73,7 +73,7 @@ export class AddMovie extends LitElement {
               </ziro-input>
               <br>
               <ziro-input
-                @keydown=${e => this.isNavKey(e) && this.next()}
+                @keydown=${e => this.isEnterKey(e) && this.next()}
                 .value=${this.rating}
                 @ziro-selector-input=${e => this.rating = e.detail}
                 name="rating"
@@ -125,9 +125,8 @@ export class AddMovie extends LitElement {
     `;
   }
 
-  isNavKey(e) {
-    return e.key === 'Enter' || e.which === 13 || e.keyCode === 13 ||
-           e.key === 'Tab'   || e.which === 9 ||  e.keyCode === 9;
+  isEnterKey(e) {
+    return e.key === 'Enter' || e.which === 13 || e.keyCode === 13;
   }
 
   focusInput(name) {
