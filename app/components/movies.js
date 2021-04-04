@@ -13,7 +13,7 @@ export class Movies extends LitElement {
 
   static get properties() {
     return {
-      movies: { type: Array, attribute: false },
+      movies: { type: Array },
       movieOpen: { type: Boolean },
       selectedMovie: { type: Object }
     };
@@ -27,7 +27,7 @@ export class Movies extends LitElement {
   render() {
     return html`
       <ziro-finder
-        max="6"
+        max="-1"
         placeholder="Find movies"
         hint="Movies"
         @ziro-finder-changed=${e => this.openMovie(e.detail) }>

@@ -19,7 +19,7 @@
   "license": "ISC",
   "dependencies": {
     "lit-element": "^2.4.0",
-    "ziro-components": "^1.0.28",
+    "ziro-components": "^1.0.29",
     "ziro-state": "^1.0.1"
   },
   "devDependencies": {
