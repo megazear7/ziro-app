@@ -9,8 +9,20 @@ class MoviesState extends ZiroState {
 
     init() {
         return {
-            movies: []
+            movies: [],
+            productionCompanies: []
         }
+    }
+
+    updateProductionCompanies(productionCompanies) {
+        this.state.productionCompanies = productionCompanies;
+    }
+
+    loadProductionCompanies() {
+        this.sendUpdate(
+            fetch('/.netlify/functions/production-companies')
+            .then(res => res.json())
+            .then(json => this.updateProductionCompanies(json.productionCompanies)));
     }
 
     addMovie(movie) {

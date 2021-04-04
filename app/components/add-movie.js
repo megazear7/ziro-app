@@ -25,13 +25,16 @@ export class AddMovie extends LitElement {
       description: { type: String },
       rating: { type: String },
       productionCompany: { type: String },
-      productionCompanyQuery: { type: String }
+      productionCompanyQuery: { type: String },
+      productionCompanies: { type: Array }
     };
   }
 
   connectedCallback() {
     super.connectedCallback();
+    this.productionCompanies = [];
     listen(this);
+    movieState.loadProductionCompanies();
   }
 
   render() {
@@ -95,27 +98,9 @@ export class AddMovie extends LitElement {
                 @ziro-finder-changed=${e => this.productionCompany = e.detail}
                 query=${this.productionCompanyQuery || ''}
                 @ziro-finder-input=${e => this.productionCompanyQuery = e.detail }>
-
-                <ziro-item>Paramount Pictures</ziro-item>
-                <ziro-item>Universal Pictures</ziro-item>
-                <ziro-item>20th Century Studios</ziro-item>
-                <ziro-item>Metro-Goldwyn-Mayer</ziro-item>
-                <ziro-item>Sony Pictures</ziro-item>
-                <ziro-item>DreamWorks Pictures</ziro-item>
-                <ziro-item>Columbia Pictures</ziro-item>
-                <ziro-item>Focus Features</ziro-item>
-                <ziro-item>New Line Cinema</ziro-item>
-                <ziro-item>Miramax</ziro-item>
-                <ziro-item>Castle Rock Entertainment</ziro-item>
-                <ziro-item>Amblin Entertainment</ziro-item>
-                <ziro-item>Screen Gems</ziro-item>
-                <ziro-item>Walt Disney Pictures</ziro-item>
-                <ziro-item>Lucasfilm</ziro-item>
-                <ziro-item>Lionsgate</ziro-item>
-                <ziro-item>TriStar Pictures</ziro-item>
-                <ziro-item>Annapurna Pictures</ziro-item>
-                <ziro-item>Pixar</ziro-item>
-                <ziro-item>Legendary Pictures</ziro-item>
+                ${ this.productionCompanies.map(company => html`
+                  <ziro-item>${company.name}</ziro-item>
+                `)}
               </ziro-finder>
               <ziro-wizard-nav>
                 <span slot="previous">&larr; Previous</span>
@@ -169,6 +154,7 @@ export class AddMovie extends LitElement {
   }
 
   stateUpdated() {
+    this.productionCompanies = movieState.getState().productionCompanies;
   }
 }
 
