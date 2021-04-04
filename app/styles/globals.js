@@ -48,6 +48,7 @@ export default css`
     section {
         color: var(--color-background-bold);
         margin-top: var(--size-space-medium);
+        max-width: var(--max-width);
     }
 
     a {
@@ -70,7 +71,7 @@ export default css`
     }
 
     ziro-slide-page::part(inner) {
-        max-width: 900px;
+        max-width: var(--max-width);
         margin: auto;
     }
 

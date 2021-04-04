@@ -25,6 +25,6 @@ export default css`
         --transition-speed-fast: 150ms;
         --transition-speed-normal: 300ms;
         --transition-speed-slow: 500ms;
-        --max-width: 900px;
+        --max-width: 700px;
     }
 `;
