@@ -86,9 +86,16 @@ export default css`
     }
 
     ziro-wizard {
+        z-index: 1000;
         background-color: var(--color-background-primary);
         box-shadow: var(--shadow-large);
         transition: left var(--transition-speed-slow) ease-in-out 100ms;
+    }
+
+    ziro-wizard-nav {
+        position: fixed;
+        bottom: var(--size-space-medium);
+        width: calc(100% - (2 * var(--size-space-medium)));
     }
 
     .center {

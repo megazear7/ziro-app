@@ -52,31 +52,37 @@ export class AddMovie extends LitElement {
               <h3>Add movie</h3>
               <br>
               <ziro-input
+                @keydown=${e => this.isNavKey(e) && this.focusInput('description')}
                 .value=${this.title}
+                name="title"
                 @ziro-selector-input=${e => this.title = e.detail}
                 placeholder="Enter movie title"
                 hint="Title">
               </ziro-input>
               <br>
               <ziro-input
+                @keydown=${e => this.isNavKey(e) && this.focusInput('rating')}
                 .value=${this.description}
+                name="description"
                 @ziro-selector-input=${e => this.description = e.detail}
                 placeholder="Enter movie description"
                 hint="Description">
               </ziro-input>
               <br>
               <ziro-input
+                @keydown=${e => this.isNavKey(e) && this.next()}
                 .value=${this.rating}
                 @ziro-selector-input=${e => this.rating = e.detail}
+                name="rating"
                 placeholder="Enter movie rating"
                 hint="rating">
               </ziro-input>
               <br><br>
-              <ziro-wizard-nav>
-                <span slot="previous">Close</span>
-                <span slot="next">Next &rarr;</span>
-              </ziro-wizard-nav>
             </section>
+            <ziro-wizard-nav>
+              <span slot="previous">Close</span>
+              <span slot="next">Next &rarr;</span>
+            </ziro-wizard-nav>
         </ziro-panel>
         <ziro-panel @ziro-panel-changed=${() => this.shadowRoot.getElementById('production-company').updateItems()}>
             <section>
@@ -132,6 +138,19 @@ export class AddMovie extends LitElement {
         </ziro-panel>
       </ziro-wizard>
     `;
+  }
+
+  isNavKey(e) {
+    return e.key === 'Enter' || e.which === 13 || e.keyCode === 13 ||
+           e.key === 'Tab'   || e.which === 9 ||  e.keyCode === 9;
+  }
+
+  focusInput(name) {
+    this.shadowRoot.querySelector(`ziro-input[name = "${name}"]`).focus();
+  }
+
+  next() {
+    this.shadowRoot.querySelector('ziro-wizard').next();
   }
 
   addMovie() {
