@@ -30,6 +30,7 @@ export class Movies extends LitElement {
         max="-1"
         placeholder="Find movies"
         hint="Movies"
+        .value=${this.selectedMovie}
         @ziro-finder-changed=${e => this.openMovie(e.detail) }>
         ${ this.movies.map(movie => html`
             <ziro-item value=${JSON.stringify(movie)}>${movie.title}</ziro-item>
@@ -37,7 +38,7 @@ export class Movies extends LitElement {
       </ziro-finder>
 
       <ziro-slide-page
-        @ziro-slide-page-closed=${() => this.movieOpen = false}
+        @ziro-slide-page-closed=${this.closeMovie}
         .active=${this.movieOpen}>
         <ziro-closer>&larr; Close</ziro-closer>
         ${ this.selectedMovie ? html`
@@ -50,6 +51,11 @@ export class Movies extends LitElement {
         `: ''}
       </ziro-slide-page>
     `;
+  }
+
+  closeMovie() {
+    this.selectedMovie = undefined;
+    this.movieOpen = false
   }
 
   openMovie(movie) {
