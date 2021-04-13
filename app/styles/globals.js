@@ -79,6 +79,7 @@ export default css`
         background-color: var(--color-background-primary);
         box-shadow: var(--shadow-large);
         transition: left var(--transition-speed-slow) ease-in-out 100ms;
+        z-index: 1000;
     }
 
     ziro-slide-page.small-page::part(outer) {

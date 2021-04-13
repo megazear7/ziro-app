@@ -39,6 +39,7 @@ export class Movies extends LitElement {
 
       <ziro-slide-page
         @ziro-slide-page-closed=${this.closeMovie}
+        speed="1000"
         .active=${this.movieOpen}>
         <ziro-closer>&larr; Close</ziro-closer>
         ${ this.selectedMovie ? html`
