@@ -111,31 +111,4 @@ export default css`
     .center > *:last-child {
         margin-right: auto;
     }
-
-    * {
-        --zc-primary-color: var(--color-primary);
-        --zc-primary-text-color: var(--color-primary-bold);
-        --zc-secondary-color: var(--color-secondary);
-        --zc-secondary-text-color: var(--color-secondary-bold);
-        --zc-background-color: var(--color-background-primary);
-        --zc-background-text-color: var(--color-background-bold);
-        --zc-selected-color: var(--color-grey);
-        --zc-selected-text-color: var(--color-grey-bold);
-
-        --zc-border-radius: 3px;
-
-        --zc-space-small: 10px;
-        --zc-space-medium: 20px;
-        --zc-space-large: 30px;
-        --zc-space-x2: 40px;
-        --zc-space-x3: 60px;
-
-        --zc-font-size-small: 14px;
-        --zc-font-size-medium: 16px;
-        --zc-font-size-large: 20px;
-        --zc-font-size-x2: 26px;
-        --zc-font-size-x3: 36px;
-
-        --zc-transition-speed: 300ms;
-    }
 `;

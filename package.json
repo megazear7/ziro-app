@@ -1,6 +1,6 @@
 {
   "name": "ziro-app",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A starter kit for creating web apps",
   "main": "index.js",
   "scripts": {
@@ -19,7 +19,7 @@
   "license": "ISC",
   "dependencies": {
     "lit-element": "^2.4.0",
-    "ziro-components": "^1.0.32",
+    "ziro-components": "^1.0.33",
     "ziro-state": "^1.0.1"
   },
   "devDependencies": {
