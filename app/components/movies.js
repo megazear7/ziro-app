@@ -28,7 +28,7 @@ export class Movies extends LitElement {
     return html`
       <ziro-finder
         max="-1"
-        placeholder="Find movies"
+        placeholder="Search for movies"
         hint="Movies"
         .value=${this.selectedMovie}
         @ziro-finder-changed=${e => this.openMovie(e.detail) }>

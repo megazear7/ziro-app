@@ -6,9 +6,9 @@ export default css`
         --color-secondary: #49b695;
         --color-background-primary: #222;
         --color-background-secondary: #444;
-        --color-grey: #ccc;
+        --color-grey: #a7a5a5;
 
-        --color-primary-bold: #fcc383;
+        --color-primary-bold: #fccf9c;
         --color-secondary-bold: #a4dbca;
         --color-background-bold: #ccc;
         --color-background-secondary-bold: #ddd;

@@ -92,7 +92,7 @@ export class AddMovie extends LitElement {
               <ziro-finder
                 id="production-company"
                 max="6"
-                placeholder="Production company"
+                placeholder="Search for production company"
                 hint="Movie title"
                 .value=${this.productionCompany}
                 @ziro-finder-changed=${e => this.productionCompany = e.detail}

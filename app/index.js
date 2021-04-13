@@ -23,6 +23,10 @@ export class MyApp extends LitElement {
         color: var(--color-background-primary-bold);
       }
 
+      ziro-panel:focus {
+        outline: none;
+      }
+
       ziro-panel > * {
         max-width: var(--max-width);
         margin: auto;
