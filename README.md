@@ -1,9 +1,8 @@
 # Ziro App
 
-An ultra opinionated web app development framework built on top of Netlify, Lambdas, LitElement, ZiroComponents, and ZiroState, and Rollup.
-It makes heavy use of web components, ES modules, and other browser native APIs including service worker and web manifest.
+A web app development framework built on top of Netlify, Lambdas, LitElement, ZiroComponents, and ZiroState, and Rollup. It makes heavy use of web components, ES modules, and other browser native APIs including service worker and web manifest.
 
-Checkout an example at [ziro-app-example.alexlockhart.me](https://ziro-app-example.alexlockhart.me)
+Checkout an documentation at [ziro-app.alexlockhart.me](https://ziro-app.alexlockhart.me) and the the example at [ziro-app-example.alexlockhart.me](https://ziro-app-example.alexlockhart.me).
 
 ## Local development
 
@@ -72,11 +71,3 @@ This is where images and other assets can be added.
 ### API
 
 The top level `api` directory is where you can add Netlify Functions.
-
-## Documentation
-
-The documentation site at [ziro-app.alexlockhart.me](https://ziro-app.alexlockhart.me) can be developed locally by running the below command.
-
-```
-npm run docs
-```

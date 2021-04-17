@@ -8,11 +8,7 @@
     "live": "netlify dev --live",
     "app:serve": "web-dev-server --node-resolve --root-dir app --watch",
     "app:build": "rollup -c",
-    "netlify:link": "netlify link",
-    "docs": "npm run docs:serve",
-    "docs:build": "orison build --srcDir docs --buildDir built-docs",
-    "docs:serve": "orison serve --srcDir docs",
-    "docs:static": "orison static --srcDir docs"
+    "netlify:link": "netlify link"
   },
   "keywords": [
     "Ziro",
