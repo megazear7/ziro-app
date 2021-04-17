@@ -72,3 +72,11 @@ This is where images and other assets can be added.
 ### API
 
 The top level `api` directory is where you can add Netlify Functions.
+
+## Documentation
+
+The documentation site at [ziro-app.alexlockhart.me](https://ziro-app.alexlockhart.me) can be developed locally by running the below command.
+
+```
+npm run docs
+```

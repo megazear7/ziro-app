@@ -1,4 +1,8 @@
 node_modules
 site
+
 # Local Netlify folder
 .netlify
+
+# Docs
+built-docs
