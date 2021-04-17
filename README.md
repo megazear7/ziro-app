@@ -1,5 +1,7 @@
 # Ziro App
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/94f0c469-abb9-4222-b6e1-c5c4b6301762/deploy-status)](https://app.netlify.com/sites/ziro-app-example/deploys)
+
 A web app development framework built on top of Netlify, Lambdas, LitElement, ZiroComponents, and ZiroState, and Rollup. It makes heavy use of web components, ES modules, and other browser native APIs including service worker and web manifest.
 
 Checkout an documentation at [ziro-app.alexlockhart.me](https://ziro-app.alexlockhart.me) and the the example at [ziro-app-example.alexlockhart.me](https://ziro-app-example.alexlockhart.me).
