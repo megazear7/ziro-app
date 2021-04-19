@@ -24,7 +24,7 @@ export class LandingPage extends LitElement {
 
   render() {
     return html`
-      <h1>Your movies</h1>
+      <h1>${appData.title}</h1>
       <section>
         <my-app-movies></my-app-movies>
       </section>
