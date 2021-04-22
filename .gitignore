@@ -6,3 +6,6 @@ site
 
 # Docs
 built-docs
+
+# Mac
+.DS_Store
