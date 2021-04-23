@@ -27,7 +27,7 @@ export class ColorMode extends LitElement {
 
   render() {
     return html`
-        <my-app-toggle-icon icon="sun" .on=${this.on} @toggle=${this.toggle}></my-app-toggle-icon>
+        <my-app-toggle-icon icon="contrast" .on=${this.on} @toggle=${this.toggle}></my-app-toggle-icon>
     `;
   }
 

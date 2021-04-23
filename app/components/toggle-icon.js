@@ -3,7 +3,7 @@ import appData from '../data.js';
 import { classMap } from 'lit-html/directives/class-map';
 import globals from '../styles/globals.js';
 import iconStyles from '../styles/icons.js';
-import sunIcon from '../icons/sun.js';
+import contrastIcon from '../icons/contrast.js';
 import lightIcon from '../icons/light.js';
 
 export class ToggleIcon extends LitElement {
@@ -40,7 +40,7 @@ export class ToggleIcon extends LitElement {
     if (name === 'icon') {
       this.iconSvg = {
         'light': lightIcon,
-        'sun': sunIcon,
+        'contrast': contrastIcon,
       }[newVal];
     }
   }
